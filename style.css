@@ -1,0 +1,102 @@
+body{
+    margin:0;
+    background:#090909;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:radial-gradient(circle,#330000 0%,#111 45%,#000 100%);
+}
+
+h1{
+    font-size:90px;
+    letter-spacing:6px;
+    margin:0;
+}
+
+.slogan{
+    color:#ff2a2a;
+    font-size:30px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.subtitle{
+    color:#bbbbbb;
+    font-size:22px;
+    margin-bottom:45px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.buttons a{
+    color:white;
+    text-decoration:none;
+    border:2px solid red;
+    padding:15px 35px;
+    transition:.3s;
+}
+
+.buttons a:hover{
+    background:red;
+}
+
+section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 0;
+}
+
+h2{
+    border-top:2px solid red;
+    border-bottom:2px solid red;
+    color:#ff4444;
+    padding:15px;
+    text-align:center;
+}
+
+.game{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    margin:50px 0;
+}
+
+.game img{
+    width:320px;
+    border:2px solid red;
+}
+
+.game h3{
+    font-size:42px;
+    margin:0 0 15px;
+}
+
+.game p{
+    color:#d0d0d0;
+    font-size:20px;
+    line-height:1.6;
+}
+
+#about{
+    text-align:center;
+}
+
+#about p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
