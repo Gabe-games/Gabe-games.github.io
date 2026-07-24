@@ -1,119 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gabe Games</title>
-
-<style>
-
-body{
-    margin:0;
-    background:#111;
-    color:white;
-    font-family:Arial, sans-serif;
-}
-
-header{
-    background:#8B0000;
-    padding:30px;
-    text-align:center;
-}
-
-h1{
-    margin:0;
-    font-size:48px;
-}
-
-p{
-    color:#ddd;
-}
-
-.games{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    padding:40px;
-}
-
-.card{
-    background:#1d1d1d;
-    width:300px;
-    padding:20px;
-    border-radius:15px;
-    border:2px solid #8B0000;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 25px red;
-}
-
-button{
-    background:#b00000;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
-}
-
-button:hover{
-    background:red;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    color:gray;
-}
-
-</style>
-
-</head>
-
-<body>
-
 <header>
+    <h1>GABE GAMES</h1>
 
-<h1>🎮 Gabe Games</h1>
+    <p class="slogan">
+        BY A GAMER. FOR GAMERS.
+    </p>
 
-<p>Making games one project at a time.</p>
+    <p class="subtitle">
+        Making games one project at a time.
+    </p>
 
+    <div class="buttons">
+        <a href="#games">VIEW GAMES</a>
+        <a href="#about">ABOUT THE DEV</a>
+    </div>
 </header>
 
-<section class="games">
+<section id="games">
 
-<div class="card">
-<h2>🏨 Motel Sleep</h2>
-<p>A creepy indoor motel survival horror game.</p>
-<button>Coming Soon</button>
-</div>
+    <h2>ACTIVE DEVELOPMENT</h2>
 
-<div class="card">
-<h2>🗳️ Trump Clicker</h2>
-<p>Click your way to victory and unlock upgrades!</p>
-<button>In Active Development</button>
-</div>
+    <div class="game">
+        <img src="images/trump-clicker-logo.png" alt="Trump Clicker">
 
-<div class="card">
-<h2>🏹 Hunger Games Fan Project</h2>
-<p>A fan-made Hunger Games experience.</p>
-<button>Planning</button>
-</div>
+        <div>
+            <h3>TRUMP CLICKER</h3>
+            <p>Click your way to victory and unlock upgrades!</p>
+        </div>
+    </div>
+
+    <h2>NEXT IN DEVELOPMENT</h2>
+
+    <div class="game">
+        <img src="images/motel-sleep-logo.png" alt="Motel Sleep">
+
+        <div>
+            <h3>MOTEL SLEEP</h3>
+            <p>A creepy indoor motel survival horror game.</p>
+        </div>
+    </div>
 
 </section>
 
-<footer>
+<section id="about">
 
-© 2026 Gabe Games
+    <h2>A LITTLE ABOUT THE DEV</h2>
 
-</footer>
+    <p>
+        Hi! I'm Gabriel, the creator of Gabe Games.
+        I enjoy making games ranging from horror to
+        arcade games and sharing my progress with everyone.
+    </p>
 
-</body>
-</html>
+</section>
