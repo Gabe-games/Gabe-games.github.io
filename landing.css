@@ -70,6 +70,8 @@ body{
 
 .homeButton{
 
+    display:inline-block;
+
     font-family:"Bebas Neue",sans-serif;
 
     text-decoration:none;
