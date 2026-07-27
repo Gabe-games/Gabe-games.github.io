@@ -1,215 +1,25 @@
 body{
+
     margin:0;
-    background:#000;
+
+    background:#090909;
+
     color:white;
+
     font-family:Arial,sans-serif;
-    overflow-x:hidden;
-}
-header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-
-    background:radial-gradient(circle,#330000 0%,#111 45%,#000 100%);
-}
-h1{
-    font-family:'Bebas Neue',sans-serif;
-    font-size:120px;
-    letter-spacing:12px;
-    margin:0;
-    color:white;
-
-    text-shadow:
-        0 0 12px rgba(255,255,255,.2),
-        0 0 35px rgba(255,0,0,.15);
-
-
-.subtitle{
-    color:#bbbbbb;
-    font-size:22px;
-    margin-bottom:45px;
-}
-
-.buttons{
-    display:flex;
-    gap:20px;
-}
-
-.buttons a{
-    color:white;
-    text-decoration:none;
-    border:2px solid red;
-    padding:15px 35px;
-    transition:.3s;
-}
-
-.buttons a:hover{
-    background:red;
-}
-
-section{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:70px 0;
-}
-
-h2{
-    border-top:2px solid red;
-    border-bottom:2px solid red;
-    color:#ff4444;
-    padding:15px;
-    text-align:center;
-}
-
-.game{
-    display:flex;
-    align-items:center;
-    gap:35px;
-    margin:50px 0;
-}
-
-.game img{
-    width:320px;
-    border:2px solid red;
-}
-
-.game h3{
-    font-size:42px;
-    margin:0 0 15px;
-}
-
-.game p{
-    color:#d0d0d0;
-    font-size:20px;
-    line-height:1.6;
-}
-
-#about{
-    text-align:center;
-}
-
-#about p{
-    font-size:20px;
-    max-width:700px;
-    margin:auto;
-    line-height:1.7;
-}
-
-/* LANDING PAGE */
-
-#landing{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:#000;
-    position:relative;
-    overflow:hidden;
-}
-
-/* Red Glow */
-
-#landing::before{
-    content:"";
-    position:absolute;
-    width:700px;
-    height:700px;
-
-    background:radial-gradient(circle,
-        rgba(180,0,0,.35) 0%,
-        rgba(120,0,0,.18) 35%,
-        transparent 75%);
-
-    filter:blur(80px);
-
-    z-index:0;
-}
-
-/* Logo */
-
-.logo{
-
-    font-family:"Bebas Neue",sans-serif;
-
-    font-size:120px;
-
-    letter-spacing:10px;
-
-    color:white;
-
-    z-index:2;
-
-    margin:0;
-}
-
-/* Slogan */
-
-.slogan{
-
-    font-family:"Bebas Neue",sans-serif;
-
-    font-size:34px;
-
-    color:#ff3030;
-
-    letter-spacing:2px;
-
-    margin:20px 0 50px;
-
-    z-index:2;
-}
-
-/* HOME Button */
-
-.homeButton{
-
-    font-family:"Bebas Neue",sans-serif;
-
-    color:white;
-
-    text-decoration:none;
-
-    border:2px solid #b30000;
-
-    padding:15px 50px;
-
-    font-size:28px;
-
-    letter-spacing:2px;
-
-    transition:.35s;
-
-    z-index:2;
-}
-
-.homeButton:hover{
-
-    background:#b30000;
-
-    box-shadow:0 0 25px rgba(255,0,0,.5);
-
-    transform:scale(1.05);
 
 }
-    max-width:700px;
-    margin:auto;
-    line-height:1.7;
-}
-/* ---------- NAVIGATION ---------- */
 
 nav{
 
     position:sticky;
+
     top:0;
 
     background:#0a0a0a;
 
     border-top:2px solid #cc0000;
+
     border-bottom:2px solid #cc0000;
 
     display:flex;
@@ -231,8 +41,6 @@ nav{
     font-size:42px;
 
     letter-spacing:3px;
-
-    color:white;
 
 }
 
@@ -269,5 +77,135 @@ nav a{
 nav a:hover{
 
     color:#ff2a2a;
+
+}
+
+header{
+
+    height:60vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:radial-gradient(circle,#330000 0%,#111 45%,#000 100%);
+
+}
+
+header h1{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:90px;
+
+    letter-spacing:8px;
+
+    margin:0;
+
+}
+
+.slogan{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    color:#ff3030;
+
+    font-size:32px;
+
+}
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:70px 0;
+
+}
+
+h2{
+
+    border-top:2px solid #cc0000;
+
+    border-bottom:2px solid #cc0000;
+
+    padding:15px;
+
+    text-align:center;
+
+    color:#ff4444;
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:42px;
+
+    letter-spacing:2px;
+
+}
+
+.game{
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:center;
+
+    margin:50px 0;
+
+}
+
+.game img{
+
+    width:320px;
+
+    border:2px solid #cc0000;
+
+}
+
+.game h3{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.game p{
+
+    font-size:20px;
+
+    color:#d0d0d0;
+
+    line-height:1.7;
+
+}
+
+#about{
+
+    text-align:center;
+
+}
+
+#about p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:1.8;
 
 }
