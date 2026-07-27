@@ -1,0 +1,113 @@
+body{
+    margin:0;
+    background:#000;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+#landing{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    background:#000;
+    overflow:hidden;
+}
+
+#landing::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+
+    background:radial-gradient(circle,
+        rgba(180,0,0,.35) 0%,
+        rgba(120,0,0,.18) 35%,
+        transparent 75%);
+
+    filter:blur(80px);
+
+    z-index:0;
+}
+
+.logo{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:120px;
+
+    letter-spacing:12px;
+
+    color:white;
+
+    margin:0;
+
+    z-index:2;
+
+    text-shadow:
+        0 0 12px rgba(255,255,255,.2),
+        0 0 35px rgba(255,0,0,.15);
+
+}
+
+.slogan{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    font-size:36px;
+
+    letter-spacing:2px;
+
+    color:#ff3030;
+
+    margin:20px 0 50px;
+
+    z-index:2;
+
+}
+
+.homeButton{
+
+    font-family:"Bebas Neue",sans-serif;
+
+    text-decoration:none;
+
+    color:white;
+
+    border:2px solid #b30000;
+
+    padding:15px 55px;
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+    transition:.35s;
+
+    z-index:2;
+
+}
+
+.homeButton:hover{
+
+    background:#b30000;
+
+    box-shadow:0 0 25px rgba(255,0,0,.5);
+
+    transform:scale(1.05);
+
+}
+
+body{
+
+    transition:opacity 1s ease;
+
+}
+
+body.fadeOut{
+
+    opacity:0;
+
+}
