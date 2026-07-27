@@ -209,3 +209,20 @@ h2{
     line-height:1.8;
 
 }
+/* HERO GENRES */
+
+.genreContainer{
+    margin:35px 0 20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.genre{
+    border:2px solid #ff2a2a;
+    color:#ff2a2a;
+    padding:8px 18px;
+    font-family:"Bebas Neue", sans-serif;
+    font-size:24px;
+    letter-spacing:2px;
+}
