@@ -80,9 +80,9 @@ nav a:hover{
 
 }
 
-header{
+#hero{
 
-    height:60vh;
+    min-height:60vh;
 
     display:flex;
 
