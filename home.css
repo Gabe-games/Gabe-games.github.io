@@ -110,15 +110,7 @@ header h1{
 
 }
 
-.slogan{
 
-    font-family:"Bebas Neue",sans-serif;
-
-    color:#ff3030;
-
-    font-size:32px;
-
-}
 
 section{
 
@@ -212,17 +204,42 @@ h2{
 /* HERO GENRES */
 
 .genreContainer{
-    margin:35px 0 20px;
+    margin:30px 0;
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:25px;
 }
 
 .genre{
     border:2px solid #ff2a2a;
     color:#ff2a2a;
-    padding:8px 18px;
-    font-family:"Bebas Neue", sans-serif;
-    font-size:24px;
-    letter-spacing:2px;
+    padding:10px 24px;
+    font-family:"Bebas Neue",sans-serif;
+    font-size:28px;
+    letter-spacing:3px;
+    transition:.3s;
+}
+
+.genre:hover{
+    background:#ff2a2a;
+    color:black;
+    transform:translateY(-3px);
+    box-shadow:0 0 18px rgba(255,42,42,.6);
+}
+.slogan{
+    margin-top:25px;
+}
+.slogan{
+    font-family:"Bebas Neue",sans-serif;
+    color:#ff3030;
+    font-size:32px;
+    margin:25px 0 0;
+}
+.heroLine{
+    width:75%;
+    max-width:900px;
+    height:3px;
+    background:#ff2a2a;
+    margin:18px 0;
+    box-shadow:0 0 12px rgba(255,42,42,.6);
 }
