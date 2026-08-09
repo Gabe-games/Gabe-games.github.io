@@ -266,3 +266,25 @@ h2{
     color:black;
     box-shadow:0 0 20px rgba(255,42,42,.7);
 }
+.play-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    color: white;
+    background: transparent;
+    border: 2px solid #ff2a2a;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.play-button:hover {
+    background: #ff2a2a;
+    color: black;
+    transform: scale(1.05);
+}
