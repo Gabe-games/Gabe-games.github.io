@@ -1,29 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b0c" />
+    <title>Motel Sleep — Night One</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <canvas id="game" tabindex="0" aria-label="Motel Sleep game"></canvas>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabe Games</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <div id="start-screen" class="screen">
+      <div class="title-card">
+        <p class="eyebrow">NIGHT ONE · 2007</p>
+        <h1>MOTEL<br /><span>SLEEP</span></h1>
+        <p class="intro">You need the money. The motel needs someone awake.</p>
+        <button id="start-button">BEGIN SHIFT</button>
+        <p class="controls">WASD to move · Mouse to look · E to interact · C to close a screen</p>
+      </div>
+    </div>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="landing.css">
-</head>
+    <div id="hud" class="hidden">
+      <div class="topbar">
+        <div><span class="label">SHIFT</span><strong id="shift-clock">12:00 AM</strong></div>
+        <div class="objective"><span class="label">OBJECTIVE</span><strong id="objective">Answer the motel phone.</strong></div>
+      </div>
+      <div id="message" aria-live="polite"></div>
+      <div id="interaction">PRESS <kbd>E</kbd> TO INTERACT</div>
+      <div id="crosshair">+</div>
 
-<body>
-<header id="landing">
+      <section id="monitor-ui" class="overlay-panel hidden" aria-live="polite">
+        <div class="camera-readout">
+          <p class="panel-label">NIGHT OWL SECURITY SYSTEM · LIVE 3D FEED</p>
+          <h2 id="camera-view-title">CAM 01 — LOBBY</h2>
+          <p id="camera-status">LIVE FEED — NO MOTION</p>
+        </div>
+        <div class="camera-controls">
+          <p id="camera-directory">CAM 02 HALLWAY · CAM 03 LAUNDRY · CAM 04 PARKING</p>
+          <div id="camera-buttons" class="camera-buttons" aria-label="Security camera views">
+            <button type="button" data-camera="1">1 · LOBBY</button>
+            <button type="button" data-camera="2">2 · HALL</button>
+            <button type="button" data-camera="3">3 · LAUNDRY</button>
+            <button type="button" data-camera="4">4 · PARKING</button>
+            <button type="button" data-camera="5">5 · BREAK</button>
+            <button type="button" data-camera="6">6 · SERVICE</button>
+          </div>
+          <small>Actual in-game camera views · Press 1–6 to switch · Press C to step away.</small>
+        </div>
+      </section>
 
-    <h1 class="logo">GABE GAMES</h1>
+      <section id="hide-ui" class="overlay-panel hidden">
+        <p class="panel-label">LOCKER</p>
+        <h2>DON'T MAKE A SOUND.</h2>
+        <p>You hold your breath between old towels and cleaning supplies.</p>
+        <small>Press C to leave the locker.</small>
+      </section>
+    </div>
 
-    <p class="slogan">
-        BY A GAMER. FOR GAMERS.
-    </p>
+    <div id="game-over" class="screen hidden">
+      <div class="title-card">
+        <p class="eyebrow">SHIFT TERMINATED</p>
+        <h1 id="game-over-title">YOU WERE<br /><span>FOUND</span></h1>
+        <p id="game-over-copy">The office was never safe.</p>
+        <button id="restart-button">TRY AGAIN</button>
+      </div>
+    </div>
 
-<a href="home.html" class="homeButton" id="homeButton">
-    HOME
-</a>
-</header>
-</body>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="./game.js"></script>
+  </body>
 </html>
