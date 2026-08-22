@@ -1,73 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#090b0c" />
-    <title>Motel Sleep — Night One</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <canvas id="game" tabindex="0" aria-label="Motel Sleep game"></canvas>
 
-    <div id="start-screen" class="screen">
-      <div class="title-card">
-        <p class="eyebrow">NIGHT ONE · 2007</p>
-        <h1>MOTEL<br /><span>SLEEP</span></h1>
-        <p class="intro">You need the money. The motel needs someone awake.</p>
-        <button id="start-button">BEGIN SHIFT</button>
-        <p class="controls">WASD to move · Mouse to look · E to interact · C to close a screen</p>
-      </div>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div id="hud" class="hidden">
-      <div class="topbar">
-        <div><span class="label">SHIFT</span><strong id="shift-clock">12:00 AM</strong></div>
-        <div class="objective"><span class="label">OBJECTIVE</span><strong id="objective">Answer the motel phone.</strong></div>
-      </div>
-      <div id="message" aria-live="polite"></div>
-      <div id="interaction">PRESS <kbd>E</kbd> TO INTERACT</div>
-      <div id="crosshair">+</div>
+    <title>Gabe Games</title>
 
-      <section id="monitor-ui" class="overlay-panel hidden" aria-live="polite">
-        <div class="camera-readout">
-          <p class="panel-label">NIGHT OWL SECURITY SYSTEM · LIVE 3D FEED</p>
-          <h2 id="camera-view-title">CAM 01 — LOBBY</h2>
-          <p id="camera-status">LIVE FEED — NO MOTION</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #000;
+        }
+
+        body {
+            font-family: "Bebas Neue", sans-serif;
+        }
+
+        .intro {
+            position: relative;
+
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            background: #000;
+
+            opacity: 1;
+
+            transition: opacity 1s ease;
+        }
+
+        /* RED GLOW */
+
+        .glow {
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(180, 0, 0, 0.55) 0%,
+                    rgba(120, 0, 0, 0.25) 35%,
+                    rgba(0, 0, 0, 0) 70%
+                );
+
+            opacity: 0;
+
+            animation: glowFade 2s ease forwards;
+
+            animation-delay: 1.2s;
+        }
+
+        /* TITLE */
+
+        h1 {
+            position: relative;
+
+            margin: 0;
+
+            color: white;
+
+            font-size: clamp(70px, 12vw, 160px);
+
+            letter-spacing: 6px;
+
+            opacity: 0;
+
+            text-shadow:
+                0 0 15px rgba(255, 0, 0, 0.35);
+
+            animation: titleFade 1.5s ease forwards;
+
+            animation-delay: 2s;
+        }
+
+        /* SLOGAN */
+
+        .slogan {
+            position: relative;
+
+            margin-top: 5px;
+
+            color: #d81f1f;
+
+            font-size: clamp(24px, 4vw, 45px);
+
+            letter-spacing: 3px;
+
+            opacity: 0;
+
+            animation: sloganFade 1.5s ease forwards;
+
+            animation-delay: 4s;
+        }
+
+        /* HOME BUTTON */
+
+        .homeButton {
+            position: relative;
+
+            margin-top: 40px;
+
+            padding: 12px 50px;
+
+            border: 2px solid #c51d1d;
+
+            background: transparent;
+
+            color: white;
+
+            font-family: "Bebas Neue", sans-serif;
+
+            font-size: 28px;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+
+            animation: buttonFade 1.5s ease forwards;
+
+            animation-delay: 5.2s;
+        }
+
+        .homeButton:hover {
+            background: #c51d1d;
+
+            transform: scale(1.05);
+        }
+
+        /* EXIT FADE */
+
+        .intro.fadeOut {
+            opacity: 0;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes glowFade {
+
+            from {
+                opacity: 0;
+                transform: scale(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes titleFade {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes sloganFade {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonFade {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main class="intro" id="intro">
+
+        <div class="glow"></div>
+
+        <h1>GABE GAMES</h1>
+
+        <div class="slogan">
+            BY A GAMER. FOR GAMERS.
         </div>
-        <div class="camera-controls">
-          <p id="camera-directory">CAM 02 HALLWAY · CAM 03 LAUNDRY · CAM 04 PARKING</p>
-          <div id="camera-buttons" class="camera-buttons" aria-label="Security camera views">
-            <button type="button" data-camera="1">1 · LOBBY</button>
-            <button type="button" data-camera="2">2 · HALL</button>
-            <button type="button" data-camera="3">3 · LAUNDRY</button>
-            <button type="button" data-camera="4">4 · PARKING</button>
-            <button type="button" data-camera="5">5 · BREAK</button>
-            <button type="button" data-camera="6">6 · SERVICE</button>
-          </div>
-          <small>Actual in-game camera views · Press 1–6 to switch · Press C to step away.</small>
-        </div>
-      </section>
 
-      <section id="hide-ui" class="overlay-panel hidden">
-        <p class="panel-label">LOCKER</p>
-        <h2>DON'T MAKE A SOUND.</h2>
-        <p>You hold your breath between old towels and cleaning supplies.</p>
-        <small>Press C to leave the locker.</small>
-      </section>
-    </div>
+        <button class="homeButton" id="homeButton">
+            HOME
+        </button>
 
-    <div id="game-over" class="screen hidden">
-      <div class="title-card">
-        <p class="eyebrow">SHIFT TERMINATED</p>
-        <h1 id="game-over-title">YOU WERE<br /><span>FOUND</span></h1>
-        <p id="game-over-copy">The office was never safe.</p>
-        <button id="restart-button">TRY AGAIN</button>
-      </div>
-    </div>
+    </main>
 
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
-    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-    <script src="./game.js"></script>
-  </body>
+    <script>
+
+        const intro = document.getElementById("intro");
+        const homeButton = document.getElementById("homeButton");
+
+        homeButton.addEventListener("click", function () {
+
+            intro.classList.add("fadeOut");
+
+            setTimeout(function () {
+
+                window.location.href = "home.html";
+
+            }, 1000);
+
+        });
+
+    </script>
+
+</body>
+
 </html>
